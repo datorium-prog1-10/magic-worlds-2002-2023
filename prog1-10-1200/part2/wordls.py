@@ -61,20 +61,19 @@ class Dragon:
         self.energy -= 100
         target.health -= 30
 
+def main():
+    humans = []
+    dragons = []
 
-Wizard("Gandalf", 200)
-Wizard("Saareman", 200)
-Human("Harry")
-Dragon("Smaug", 300)
+    for i in range(100):
+        humans.append(Human(f"Name{i}"))
 
-Wizard.dictionary["Gandalf"].status()
-Wizard.dictionary["Saareman"].status()
-Human.dictionary["Harry"].status()
-Dragon.dictionary["Smaug"].status()
+    for i in range(10): 
+        dragons.append(Dragon(f"Dragon{i}", 200))
 
-for i in range(4):
-    Dragon.dictionary["Smaug"].attack(Human.dictionary["Harry"])
-    Human.dictionary["Harry"].status()
+    # UZDEVUMS:
+    # Izveido programmu kas 20 reizes nejauši
+    # izvēlēsies vienu pūķi un vienu cilvēku
+    # un attiecīgi tas pūķis uzbruks cilvēkam
 
-Wizard.dictionary["Gandalf"].heal(Human.dictionary["Harry"])
-Human.dictionary["Harry"].status()
+main()
